@@ -160,7 +160,7 @@ public class MathUtilities {
      */
     public Byte divide(byte dividend, byte divisor) {
 
-        return (byte) (dividend - divisor);
+        return (byte) (dividend / divisor);
     }
 
     /**
