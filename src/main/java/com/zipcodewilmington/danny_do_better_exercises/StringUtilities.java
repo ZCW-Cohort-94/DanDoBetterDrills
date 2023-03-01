@@ -93,7 +93,10 @@ public class StringUtilities {
      * @return an identical string with characters in reverse order.
      */
     public static String reverse(String stringToReverse){
-
-        return null;
+        StringBuilder word = new StringBuilder();
+        word.append(stringToReverse);
+        word.reverse();
+        String reversed = word.toString();
+        return reversed;
     }
 }
