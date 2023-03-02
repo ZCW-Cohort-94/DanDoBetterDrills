@@ -61,7 +61,7 @@ public class MathUtilities {
      */
     public Double add(double baseValue, double difference) {
 
-        return null;
+        return baseValue + difference;
     }
 
     /**
