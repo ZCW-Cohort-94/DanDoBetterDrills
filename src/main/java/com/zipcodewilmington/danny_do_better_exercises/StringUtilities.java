@@ -1,5 +1,7 @@
 package com.zipcodewilmington.danny_do_better_exercises;
 
+import java.sql.SQLOutput;
+
 /**
  * Created by dan on 6/14/17.
  */
@@ -8,7 +10,7 @@ public class StringUtilities {
      * @return `Hello World` as a string
      */
     public static String getHelloWorld() {
-        return null;
+        return "Hello World";
     }
 
     /**
@@ -17,7 +19,7 @@ public class StringUtilities {
      * @return the concatenation of two strings, `firstSegment`, and `secondSegment`
      */
     public static String concatenation(String firstSegment, String secondSegment){
-        return null;
+        return firstSegment+secondSegment;
     }
 
     /**
@@ -26,7 +28,7 @@ public class StringUtilities {
      * @return the concatenation of an integer, `firstSegment`, and a String, `secondSegment`
      */
     public static String concatenation(int firstSegment, String secondSegment){
-        return null;
+        return firstSegment+secondSegment; //might have to come back if it doesn't allow concatenation without more work
     }
 
     /**
@@ -34,7 +36,7 @@ public class StringUtilities {
      * @return the first 3 characters of `input`
      */
     public static String getPrefix(String input){
-        return null;
+        return input.substring(0,3);
     }
 
     /**
@@ -42,7 +44,8 @@ public class StringUtilities {
      * @return the last 3 characters of `input`
      */
     public static String getSuffix(String input){
-        return null;
+        int a = input.length();
+        return input.substring(a - 3);
     }
 
     /**
@@ -50,8 +53,7 @@ public class StringUtilities {
      * @param comparableValue the value to be compared against
      * @return the equivalence of two strings, `inputValue` and `comparableValue`
      */
-    public static Boolean compareTwoStrings(String inputValue, String comparableValue){
-        return null;
+    public static Boolean compareTwoStrings(String inputValue, String comparableValue){ return inputValue.equals(comparableValue);
     }
 
     /**
@@ -59,7 +61,15 @@ public class StringUtilities {
      * @return the middle character of `inputValue`
      */
     public static Character getMiddleCharacter(String inputValue){
-        return null;
+        System.out.println(inputValue.length() /2); //returns 3 (rounded down from 3.5) for string with length of 7. fails on even # string
+        if(inputValue.length() % 2 == 0) {
+            return inputValue.charAt(inputValue.length() / 2 - 1);
+        }
+        else {
+            return inputValue.charAt(inputValue.length() / 2);
+        }
+
+
     }
 
     /**
@@ -67,15 +77,17 @@ public class StringUtilities {
      * @return the first sequence of characters
      */
     public static String getFirstWord(String spaceDelimitedString){
-        return null;
+        return spaceDelimitedString.split(" ")[0];
     }
+
+
 
     /**
      * @param spaceDelimitedString a string delimited by spaces
      * @return the second word of a string delimited by spaces.
      */
     public static String getSecondWord(String spaceDelimitedString){
-        return null;
+        return spaceDelimitedString.split(" ")[1];
     }
 
     /**
@@ -83,6 +95,6 @@ public class StringUtilities {
      * @return an identical string with characters in reverse order.
      */
     public static String reverse(String stringToReverse){
-        return null;
+        return new StringBuilder(stringToReverse).reverse().toString();
     }
 }
