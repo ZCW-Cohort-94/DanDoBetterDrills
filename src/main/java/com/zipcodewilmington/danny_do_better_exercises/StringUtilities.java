@@ -59,7 +59,7 @@ public class StringUtilities {
      */
     public static Boolean compareTwoStrings(String inputValue, String comparableValue){
 
-        return inputValue == comparableValue;
+        return inputValue.equals(comparableValue);
     }
 
     /**
@@ -68,7 +68,12 @@ public class StringUtilities {
      */
     public static Character getMiddleCharacter(String inputValue){
 
-        return null;
+        int a = inputValue.length();
+        int i;
+        if (a%2==0) {i=a/2 - 1;}
+        else {i = a/2;}
+
+        return inputValue.charAt(i);
     }
 
     /**
@@ -76,7 +81,9 @@ public class StringUtilities {
      * @return the first sequence of characters
      */
     public static String getFirstWord(String spaceDelimitedString){
-        return null;
+
+        String a[] = spaceDelimitedString.split(" ");
+        return a [0];
     }
 
     /**
@@ -84,7 +91,8 @@ public class StringUtilities {
      * @return the second word of a string delimited by spaces.
      */
     public static String getSecondWord(String spaceDelimitedString){
-        return null;
+        String a[] = spaceDelimitedString.split(" ");
+        return a [1];
     }
 
     /**
@@ -92,6 +100,6 @@ public class StringUtilities {
      * @return an identical string with characters in reverse order.
      */
     public static String reverse(String stringToReverse){
-        return null;
+        return new StringBuffer(stringToReverse).reverse().toString();
     }
 }
