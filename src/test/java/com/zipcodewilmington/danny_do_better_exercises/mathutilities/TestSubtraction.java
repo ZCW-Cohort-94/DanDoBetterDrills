@@ -41,7 +41,7 @@ public class TestSubtraction {
         short difference = 16383;
         short expectedShort = 1;
         // : When
-        short actualShort = mathUtils.subtract(baseValue, difference);
+        short actualShort = (short) mathUtils.subtract(baseValue, difference);
         // : Then
         assertEquals(expectedShort,actualShort);
     }
