@@ -70,7 +70,7 @@ public class StringUtilities {
      * @return the first sequence of characters
      */
     public static String getFirstWord(String spaceDelimitedString){
-        String list[] = spaceDelimitedString.split(" ");
+        String[] list = spaceDelimitedString.split(" ");
                 return list[0];
     }
 
@@ -79,7 +79,7 @@ public class StringUtilities {
      * @return the second word of a string delimited by spaces.
      */
     public static String getSecondWord(String spaceDelimitedString){
-        String list[] = spaceDelimitedString.split(" ");
+        String[] list = spaceDelimitedString.split(" ");
         return list[1];
     }
 
